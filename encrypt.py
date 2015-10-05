@@ -1,3 +1,4 @@
+# Author is Flynn Acworth
 import string
 import random
 import os
