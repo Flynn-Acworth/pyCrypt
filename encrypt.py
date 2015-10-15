@@ -1,4 +1,3 @@
-# Author is Flynn Acworth
 import string
 import random
 import os
@@ -18,10 +17,10 @@ def first_layer(message):
 	crypted_message = "" # Empty string variable will hold the crypted message.
 	
 	for c in message: # Loop for every character in message
-		if c not in string.ascii_lowercase: # If that character is not in the alphabet(Numbers, punctuation)
+		if c.lower() not in string.ascii_lowercase: # If that character is not in the alphabet(Numbers, punctuation)
 			crypted_message += c # Add that character to the crypted message WITHOUT crypting it.
 		else:	# Otherwise
-			crypted_message += shifted_alphabet[original_alphabet[c]]
+			crypted_message += shifted_alphabet[original_alphabet[c.lower()]]
 			# add to crypted message the value of original_alphabet[character] called to shifted_alphabet.
 			# For example: Character = A, original_alphabet[a] = 0, shifted_alphabet[0] = Z (if shifted by 1)
 
